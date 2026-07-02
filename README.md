@@ -116,8 +116,8 @@ We may update this Privacy Policy as the app evolves (for example, if analytics 
 
 If you have any questions about this Privacy Policy, please contact:
 
-**Email:** [your-contact-email@example.com]
-**Developer:** [Your Developer/Company Name]
+**Email:** [bisratx@gmail.com]
+**Developer:** [Gugusha]
 
 ---
 
