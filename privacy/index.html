@@ -1,1 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Gugusha</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #16a34a;
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 2.5rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2 .icon { font-size: 1.25rem; }
+
+    p { margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul li { margin-bottom: 0.35rem; }
+
+    .highlight {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      background: #f3f4f6;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    a { color: #15803d; }
+    a:hover { text-decoration: underline; }
+
+    .effective-date {
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 520px) {
+      .card { padding: 1.25rem 1rem; }
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 Gugusha</h1>
+  <p>Privacy Policy</p>
+</header>
+
+<main>
+
+  <!-- TL;DR -->
+  <div class="card">
+    <div class="highlight">
+      <strong>Short version:</strong> Gugusha stores your learning progress
+      <em>only on your own device</em>. We do not collect, transmit, or sell any
+      personal information. No account is required to use the app.
+    </div>
+  </div>
+
+  <!-- 1. Introduction -->
+  <div class="card">
+    <h2><span class="icon">📄</span>1. Introduction</h2>
+    <p>
+      Welcome to <strong>Gugusha</strong> ("the App"), a gamified English
+      learning application designed for native Amharic (Ge'ez script) speakers.
+      Gugusha is developed and maintained by Bisrat Girma ("we", "us", or
+      "our").
+    </p>
+    <p>
+      This Privacy Policy explains what information the App handles, how it is
+      used, and the choices you have. By installing or using Gugusha you agree
+      to the practices described below.
+    </p>
+    <p><strong>Effective date:</strong> 1 July 2026 &nbsp;|&nbsp;
+       <strong>App version:</strong> 1.0.0</p>
+  </div>
+
+  <!-- 2. Information we collect -->
+  <div class="card">
+    <h2><span class="icon">🗂️</span>2. Information We Collect</h2>
+
+    <p>
+      Gugusha is a <strong>zero-backend, fully client-side</strong> application.
+      It does <em>not</em> require an account, login, or any personally
+      identifiable information to function.
+    </p>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1rem 0 0.4rem;">
+      2a. Data stored locally on your device
+    </h3>
+    <p>
+      The App uses Android's <code>SharedPreferences</code> (via the
+      <code>shared_preferences</code> Flutter package) to persist your learning
+      progress entirely on your own device. The following values are stored:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Key</th><th>What it stores</th><th>Leaves device?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>highestUnlockedIndex</code></td><td>The index of the furthest lesson you have unlocked</td><td>No</td></tr>
+        <tr><td><code>xp</code></td><td>Your accumulated experience points</td><td>No</td></tr>
+        <tr><td><code>streak</code></td><td>Your current learning-streak count</td><td>No</td></tr>
+        <tr><td><code>totalAnswered</code></td><td>Total quiz questions answered</td><td>No</td></tr>
+        <tr><td><code>totalCorrect</code></td><td>Total correct answers given</td><td>No</td></tr>
+        <tr><td><code>cachedLessons</code></td><td>A cached copy of the lesson curriculum JSON</td><td>No</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:.75rem;">
+      None of this data is linked to your identity and none of it is transmitted
+      to any server, cloud service, or third party.
+    </p>
+
+    <h3 style="font-size:1rem;font-weight:600;margin:1rem 0 0.4rem;">
+      2b. Curriculum content fetch
+    </h3>
+    <p>
+      On each app launch Gugusha makes a single outbound
+      <strong>HTTP GET request</strong> to a public CDN / GitHub Gist URL to
+      check for updated lesson content. This request:
+    </p>
+    <ul>
+      <li>Contains <strong>no personal data</strong> or device identifiers.</li>
+      <li>Is a standard anonymous HTTPS request (your IP address may be visible
+          to GitHub's CDN infrastructure under their own privacy policy).</li>
+      <li>Downloads only a JSON file describing lesson content.</li>
+      <li>Fails gracefully — if you are offline the bundled content is used
+          instead.</li>
+    </ul>
+    <p>
+      GitHub's privacy practices are documented at
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+         target="_blank" rel="noopener">
+        github.com/site-policy/privacy-policies
+      </a>.
+    </p>
+  </div>
+
+  <!-- 3. No personal data -->
+  <div class="card">
+    <h2><span class="icon">🔒</span>3. No Personal Data Collection</h2>
+    <p>Gugusha does <strong>not</strong> collect:</p>
+    <ul>
+      <li>Your name, email address, phone number, or any contact details</li>
+      <li>Device identifiers (IMEI, advertising ID, etc.)</li>
+      <li>Location data</li>
+      <li>Photos, camera, or microphone access</li>
+      <li>Contacts or calendar data</li>
+      <li>Crash reports sent to external servers</li>
+      <li>Any analytics or behavioural telemetry <em>(PostHog integration is
+          architecturally defined but not active in v1.0.0)</em></li>
+    </ul>
+  </div>
+
+  <!-- 4. Permissions -->
+  <div class="card">
+    <h2><span class="icon">📱</span>4. Android Permissions</h2>
+    <p>
+      Gugusha requests only the permissions necessary for its core features:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>INTERNET</code></td>
+          <td>To fetch updated lesson curriculum from the public CDN (see §2b)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:.75rem;">
+      No other sensitive permissions (camera, microphone, location, contacts,
+      storage beyond app-private data, etc.) are requested.
+    </p>
+  </div>
+
+  <!-- 5. Data sharing -->
+  <div class="card">
+    <h2><span class="icon">🤝</span>5. Data Sharing and Third Parties</h2>
+    <p>
+      We do <strong>not</strong> sell, rent, trade, or otherwise share your
+      data with any third parties because we do not collect any data in the
+      first place.
+    </p>
+    <p>
+      The only external network contact the App makes is the curriculum content
+      fetch described in §2b, which carries no personal information.
+    </p>
+  </div>
+
+  <!-- 6. Data retention -->
+  <div class="card">
+    <h2><span class="icon">🗑️</span>6. Data Retention and Deletion</h2>
+    <p>
+      All data (your progress, XP, streak, and cached lessons) is stored
+      exclusively on your device in the App's private
+      <code>SharedPreferences</code> storage.
+    </p>
+    <p>
+      You can delete all App data at any time through your device settings:
+    </p>
+    <ul>
+      <li>
+        <strong>Android:</strong> Settings → Apps → Gugusha → Storage →
+        <em>Clear Data</em>
+      </li>
+      <li>Uninstalling the App also removes all locally stored data.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Children's privacy -->
+  <div class="card">
+    <h2><span class="icon">👶</span>7. Children's Privacy</h2>
+    <p>
+      Gugusha does not knowingly collect personal information from anyone,
+      including children under the age of 13. Because the App collects no
+      personal data at all, it is safe for use by learners of all ages.
+    </p>
+  </div>
+
+  <!-- 8. Security -->
+  <div class="card">
+    <h2><span class="icon">🛡️</span>8. Security</h2>
+    <p>
+      Because no personal data is transmitted off your device, the attack
+      surface for a data breach is minimal. Progress data lives in your
+      device's private App storage, which is sandboxed from other
+      applications by the Android OS.
+    </p>
+  </div>
+
+  <!-- 9. Future analytics -->
+  <div class="card">
+    <h2><span class="icon">📊</span>9. Future Analytics (Planned)</h2>
+    <p>
+      A future version of Gugusha may integrate an analytics SDK (currently
+      planned: PostHog) to help improve the learning experience. If and when
+      analytics are enabled, this Privacy Policy will be updated
+      <strong>before</strong> the new version is released to describe:
+    </p>
+    <ul>
+      <li>Which events are collected (e.g. <code>lesson_started</code>,
+          <code>lesson_completed</code>, <code>user_dropped_out</code>)</li>
+      <li>Whether data is anonymised or pseudonymised</li>
+      <li>How to opt out</li>
+    </ul>
+    <p>
+      You will be notified of any material change to this policy through the
+      app store listing or an in-app notice.
+    </p>
+  </div>
+
+  <!-- 10. Changes -->
+  <div class="card">
+    <h2><span class="icon">🔄</span>10. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The most recent
+      version will always be available at this URL. The "Effective date" at
+      the top of the page will be updated with each revision.
+    </p>
+  </div>
+
+  <!-- 11. Contact -->
+  <div class="card">
+    <h2><span class="icon">✉️</span>11. Contact Us</h2>
+    <p>
+      If you have questions or concerns about this Privacy Policy, please
+      open an issue or reach out via the repository:
+    </p>
+    <p>
+      <a href="github.com/BisratGirma/bisratgirma.github.io/issues"
+         target="_blank" rel="noopener">
+        github.com/BisratGirma/bisratgirma.github.io/issues
+      </a>
+    </p>
+  </div>
+
+  <p class="effective-date">Last updated: 1 July 2026</p>
+
+</main>
+
+<footer>
+  &copy; 2026 Bisrat Girma &mdash; Gugusha. All rights reserved.
+</footer>
+
+</body>
+</html>
